@@ -20,5 +20,7 @@ Comandos      Opciones
 /followers     Ver seguidores
 /adios         Salir 
 
+-----------------------------------
+
 
 
