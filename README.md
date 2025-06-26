@@ -16,9 +16,9 @@ Este proyecto implementa una aplicación cliente-servidor en Python utilizando s
 -----------------------------------
 Comandos      Opciones
 
-/repos         Ver repositorios
-/followers     Ver seguidores
-/adios         Salir 
+- /repos         Ver repositorios
+- /followers     Ver seguidores
+- /adios         Salir 
 
 -----------------------------------
 
