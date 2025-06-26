@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2025 at 02:30 AM
+-- Generation Time: Jun 26, 2025 at 02:35 AM
 -- Server version: 11.1.2-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,64 @@ SET time_zone = "+00:00";
 --
 -- Database: `github_data`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `followers`
+--
+
+CREATE TABLE `followers` (
+  `id` int(11) NOT NULL,
+  `login` varchar(255) DEFAULT NULL,
+  `html_url` varchar(255) DEFAULT NULL,
+  `owner` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `followers`
+--
+
+INSERT INTO `followers` (`id`, `login`, `html_url`, `owner`) VALUES
+(4592, 'konklone', 'https://github.com/konklone', 'stef'),
+(5906, 'sgarza', 'https://github.com/sgarza', 'stef'),
+(6331, 'danohu', 'https://github.com/danohu', 'stef'),
+(9511, 'duritong', 'https://github.com/duritong', 'stef'),
+(9900, 'romanz', 'https://github.com/romanz', 'stef'),
+(15585, 'mixr', 'https://github.com/mixr', 'stef'),
+(20079, 'l1x', 'https://github.com/l1x', 'stef'),
+(20240, 'asciimoo', 'https://github.com/asciimoo', 'stef'),
+(21212, 'mithro', 'https://github.com/mithro', 'stef'),
+(22132, 'leif', 'https://github.com/leif', 'stef'),
+(28900, 'aczid', 'https://github.com/aczid', 'stef'),
+(35065, 'ypetya', 'https://github.com/ypetya', 'stef'),
+(35631, 'a2800276', 'https://github.com/a2800276', 'stef'),
+(41827, 'Psycojoker', 'https://github.com/Psycojoker', 'stef'),
+(43155, 'elijah', 'https://github.com/elijah', 'stef'),
+(53705, 'miku', 'https://github.com/miku', 'stef'),
+(54845, 'diegode', 'https://github.com/diegode', 'stef'),
+(72709, 'zuzmo', 'https://github.com/zuzmo', 'stef'),
+(73274, 'PabloCastellano', 'https://github.com/PabloCastellano', 'stef'),
+(76114, 'thejeshgn', 'https://github.com/thejeshgn', 'stef'),
+(80577, 'kriskhaira', 'https://github.com/kriskhaira', 'stef'),
+(80981, 'tbx', 'https://github.com/tbx', 'stef'),
+(81561, 'Synchro', 'https://github.com/Synchro', 'stef'),
+(86942, 'kcnickerson', 'https://github.com/kcnickerson', 'stef'),
+(94636, 'jpic', 'https://github.com/jpic', 'stef'),
+(104737, 'Neustradamus', 'https://github.com/Neustradamus', 'stef'),
+(128454, 'seanjensengrey', 'https://github.com/seanjensengrey', 'stef'),
+(129525, 'silky', 'https://github.com/silky', 'stef'),
+(130068, 'potato', 'https://github.com/potato', 'stef'),
+(136093, 'caedesvvv', 'https://github.com/caedesvvv', 'stef'),
+(7435463, 'tinobreg', 'https://github.com/tinobreg', 'jjcblanco'),
+(58627821, 'nholuongut', 'https://github.com/nholuongut', 'jjcblanco'),
+(67303611, 'EmilianoCorvalan', 'https://github.com/EmilianoCorvalan', 'jjcblanco'),
+(83768234, 'JeanET26', 'https://github.com/JeanET26', 'jjcblanco'),
+(110321221, 'JoseContrerasDev', 'https://github.com/JoseContrerasDev', 'jjcblanco'),
+(135669488, 'chounaaaa', 'https://github.com/chounaaaa', 'jjcblanco'),
+(136649829, 'Walterzq', 'https://github.com/Walterzq', 'jjcblanco'),
+(163360357, 'yetsyy', 'https://github.com/yetsyy', 'jjcblanco'),
+(166510178, 'ernesg23', 'https://github.com/ernesg23', 'jjcblanco');
 
 -- --------------------------------------------------------
 
@@ -112,6 +170,12 @@ INSERT INTO `repositorios` (`id`, `name`, `html_url`, `description`, `owner`) VA
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `followers`
+--
+ALTER TABLE `followers`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `repositorios`
