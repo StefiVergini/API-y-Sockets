@@ -1,28 +1,30 @@
 import socket
 
-def cliente_github(host='localhost', puerto=12345):
+# Configuración del cliente
+HOST = '127.0.0.1'
+PORT = 12345
+
+def cliente_github(HOST, PORT):
+    #inicializacion del servidor  socket.AF_INET (IP tipo ipv4) socket.SOCK_STREAM (de tipo TCP)
     cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    cliente.connect((host, puerto))
+    #conectar al cliente con el servidor
+    cliente.connect((HOST, PORT))
 
     try:
-        usuario = input("👤 Ingrese su nombre de usuario de GitHub: ")
-        cliente.sendall(usuario.encode())
-
-        print(cliente.recv(4096).decode())  # Confirmación
-
         while True:
-            comando = input("💬 Ingrese un comando (/repos o /adios): ").strip()
-            cliente.sendall(comando.encode())
+            mensaje = cliente.recv(4096).decode()
+            print(mensaje, end='')
 
-            respuesta = cliente.recv(4096).decode()
-            print(respuesta)
+            entrada = input(">")
+            cliente.sendall(entrada.encode('utf-8'))
 
-            if comando == "/adios":
+            if entrada.strip().lower() == "/adios":
+                print(cliente.recv(4096).decode())
                 break
 
     finally:
         cliente.close()
-        print("🔌 Conexión cerrada.")
+        print("Conexión cerrada.")
 
 if __name__ == "__main__":
-    cliente_github()
+    cliente_github(HOST, PORT)
