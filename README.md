@@ -1,11 +1,24 @@
 # API-y-Sockets
 
-#Programa para consumir la API de github permite múltiples conexiones con Sockets y Threading.
+Cliente-Servidor con Sockets y GitHub API
 
-El cliente se conecta y debe ingresar un usuario de Github para buscar los repositorios públicos y los seguidores de esa cuenta.
-El Servidor consume la API y devuelve al cliente el usuario solicitado.
+Este proyecto implementa una aplicación cliente-servidor en Python utilizando sockets TCP. El servidor recibe un nombre de usuario de GitHub desde el cliente, consulta la API pública de GitHub, y permite consultar los repositorios y seguidores de ese usuario.
 
-Si el cliente desea salir debe ingresar simplemente ENTER para finalizar la conexión.
+---
 
-Del lado del Servidor aparecen las conexiones de los clientes y la cantidad de clientes conectados.
+¿Cómo funciona?
+
+1. El cliente se conecta al servidor e ingresa su nombre de usuario de GitHub.
+2. El servidor verifica si el usuario existe usando `requests.get()` a la API de GitHub.
+3. Si el usuario es válido se guardan los datos en la base de datos las tablas de 'repositorios' y la de 'seguidores' 
+4. se muestra un menú con las siguientes opciones:
+
+-----------------------------------
+Comandos      Opciones
+
+/repos         Ver repositorios
+/followers     Ver seguidores
+/adios         Salir 
+
+
 
